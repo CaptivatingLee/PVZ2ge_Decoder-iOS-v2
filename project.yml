@@ -1,0 +1,25 @@
+name: PVZDecoder
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: '15.0'
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    TARGETED_DEVICE_FAMILY: '1,2'
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+    INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    INFOPLIST_KEY_CFBundleDisplayName: '植物解码'
+    CODE_SIGN_STYLE: Automatic
+targets:
+  PVZDecoder:
+    type: application
+    platform: iOS
+    sources:
+      - path: App/DecoderApp.swift
+      - path: App/Resources
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.pvzdecoder
